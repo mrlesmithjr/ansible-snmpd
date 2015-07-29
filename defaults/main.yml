@@ -1,2 +1,7 @@
 ---
 # defaults file for ansible-snmpd
+config_snmpd: true
+enable_firewall: false
+enable_snmpd: true
+snmpd_authorized_network: ''
+snmpd_ro_community: ''

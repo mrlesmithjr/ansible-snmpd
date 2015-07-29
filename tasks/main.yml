@@ -1,2 +1,24 @@
 ---
 # tasks file for ansible-snmpd
+- name: main | installing snmpd
+  apt: name=snmpd state=present
+  tags: [snmpd]
+  when: ansible_os_family == "Debian"
+
+- name: main | installing snmpd
+  yum: name={{ item }} state=present
+  tags: [snmpd]
+  with_items:
+    - net-snmp
+    - net-snmp-utils
+  when: ansible_os_family == "RedHat"
+
+- name: main | copying snmpd config
+  template: src=snmpd.conf.j2 dest=/etc/snmp/snmpd.conf owner=root group=root mode=0644
+  tags: [config_snmpd,snmpd]
+  when: config_snmpd
+  notify: restart snmpd
+
+- name: main | starting and enabling snmpd service
+  tags: [snmpd]
+  service: name=snmpd state=started enabled=yes
