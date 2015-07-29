@@ -10,13 +10,13 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 
 Role Variables
 --------------
-
+````
 config_snmpd: true
 enable_firewall: false
 enable_snmpd: true
 snmpd_authorized_network: ''
 snmpd_ro_community: ''
-
+````
 Dependencies
 ------------
 
