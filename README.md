@@ -12,7 +12,6 @@ Role Variables
 --------------
 ````
 config_snmpd: true
-enable_firewall: false
 enable_snmpd: true
 snmpd_authorized_networks: []  #define read-only snmpd settings
 #  - network: 10.0.101.0/24
