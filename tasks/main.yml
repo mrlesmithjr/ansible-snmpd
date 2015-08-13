@@ -22,3 +22,4 @@
 - name: main | starting and enabling snmpd service
   tags: [snmpd]
   service: name=snmpd state=started enabled=yes
+  when: ansible_os_family == "RedHat"
