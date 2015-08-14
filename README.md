@@ -3,6 +3,8 @@ Role Name
 
 Installs snmpd
 
+[![Build Status](https://travis-ci.org/mrlesmithjr/ansible-snmpd.svg?branch=master)](https://travis-ci.org/mrlesmithjr/ansible-snmpd)
+
 Requirements
 ------------
 
