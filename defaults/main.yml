@@ -5,3 +5,6 @@ enable_snmpd: true
 snmpd_authorized_networks: []  #define read-only snmpd settings
 #  - network: 10.0.101.0/24
 #    community: example
+
+snmpd_sysLocation: "Sitting on the Dock of the Bay"
+snmpd_sysContact: "Me <me@example.org>"

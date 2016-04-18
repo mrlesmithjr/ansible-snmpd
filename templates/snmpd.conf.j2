@@ -15,8 +15,21 @@ rocommunity {{ item.community }} {{ item.network }}
 
 rouser   authOnlyUser
 
-sysLocation    Sitting on the Dock of the Bay
-sysContact     Me <me@example.org>
+
+{% if snmp_sysLocation is defined %}
+sysLocation    {{ snmp_sysLocation }}
+{% endif %}
+
+{% if snmp_sysContact is defined %}
+sysContact    {{ snmp_sysContact }}
+{% endif %}
+
+{% if snmp_sysName is defined %}
+sysName     {{ snmp_sysName }}
+{% endif %}
+
+
+
 
 sysServices    72
 
